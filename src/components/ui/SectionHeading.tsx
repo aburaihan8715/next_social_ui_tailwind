@@ -21,3 +21,5 @@ const SectionHeading = ({ heading }: SectionHeadingProps) => {
 };
 
 export default SectionHeading;
+
+// ======end=======
