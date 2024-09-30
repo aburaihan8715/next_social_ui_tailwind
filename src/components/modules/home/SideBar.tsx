@@ -8,39 +8,39 @@ export default function SideBar() {
       <div className="p-5">
         <ul className="list-none m-0 p-0">
           <li className="flex items-center mb-5">
-            <MdRssFeed className="mr-4" />
+            <MdRssFeed className="mr-4 text-2xl" />
             <span className="font-medium">Feed</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdChat className="mr-4" />
+            <MdChat className="mr-4 text-2xl" />
             <span className="font-medium">Chats</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdPlayCircleOutline className="mr-4" />
+            <MdPlayCircleOutline className="mr-4 text-2xl" />
             <span className="font-medium">Videos</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdGroup className="mr-4" />
+            <MdGroup className="mr-4 text-2xl" />
             <span className="font-medium">Groups</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdBookmark className="mr-4" />
+            <MdBookmark className="mr-4 text-2xl" />
             <span className="font-medium">Bookmarks</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdHelpOutline className="mr-4" />
+            <MdHelpOutline className="mr-4 text-2xl" />
             <span className="font-medium">Questions</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdWorkOutline className="mr-4" />
+            <MdWorkOutline className="mr-4 text-2xl" />
             <span className="font-medium">Jobs</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdEvent className="mr-4" />
+            <MdEvent className="mr-4 text-2xl" />
             <span className="font-medium">Events</span>
           </li>
           <li className="flex items-center mb-5">
-            <MdSchool className="mr-4" />
+            <MdSchool className="mr-4 text-2xl" />
             <span className="font-medium">Courses</span>
           </li>
         </ul>

@@ -23,7 +23,14 @@ export default function Post({ post }: any) {
           <div className="flex items-center">
             {/* Conditional rendering for user profile picture */}
             {user?.profilePicture ? (
-              <Image className="w-8 h-8 rounded-full object-cover" src={user.profilePicture} alt={user.username} width={32} height={32} />
+              <Image
+                className="w-8 h-8 rounded-full object-cover"
+                src={user.profilePicture}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt={user.username}
+                width={32}
+                height={32}
+              />
             ) : (
               <div className="w-8 h-8 rounded-full bg-gray-300" /> // Fallback if profile picture is not available
             )}
@@ -37,12 +44,37 @@ export default function Post({ post }: any) {
         <div className="my-5">
           <span className="text-base">{post?.desc}</span>
           {/* Conditional rendering for post photo */}
-          {post.photo && <Image className="mt-5 w-full max-h-[500px] object-contain" src={post.photo} alt="post" width={500} height={500} />}
+          {post.photo && (
+            <Image
+              className="mt-5 w-full max-h-[500px] object-contain"
+              src={post.photo}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt="post"
+              width={500}
+              height={500}
+            />
+          )}
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Image className="w-6 h-6 mr-2 cursor-pointer" src="/assets/like.png" onClick={likeHandler} alt="like" width={24} height={24} />
-            <Image className="w-6 h-6 mr-2 cursor-pointer" src="/assets/heart.png" onClick={likeHandler} alt="heart" width={24} height={24} />
+            <Image
+              className="w-6 h-6 mr-2 cursor-pointer"
+              src="/assets/like.png"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onClick={likeHandler}
+              alt="like"
+              width={24}
+              height={24}
+            />
+            <Image
+              className="w-6 h-6 mr-2 cursor-pointer"
+              src="/assets/heart.png"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onClick={likeHandler}
+              alt="heart"
+              width={24}
+              height={24}
+            />
             <span className="text-sm">{like} people like it</span>
           </div>
           <div>

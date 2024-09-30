@@ -6,7 +6,14 @@ export default function Share() {
     <div className="w-full h-44 rounded-lg shadow-md">
       <div className="p-4">
         <div className="flex items-center">
-          <Image className="rounded-full object-cover mr-2" src="/assets/person/1.jpeg" alt="Profile" width={50} height={50} />
+          <Image
+            className=" mr-2 w-20 h-20 rounded-full object-cover"
+            src="/assets/person/1.jpeg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt="Profile"
+            width={50}
+            height={50}
+          />
           <input className="border-none w-4/5 focus:outline-none" placeholder="What's in your mind Safak?" />
         </div>
         <hr className="my-5" />

@@ -8,12 +8,26 @@ export default function RightBar({ profile }: any) {
     return (
       <>
         <div className="flex items-center">
-          <Image className="w-10 h-10 mr-2" src="/assets/gift.png" alt="gift" width={40} height={40} />
+          <Image
+            className="w-10 h-10 mr-2"
+            src="/assets/gift.png"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt="gift"
+            width={40}
+            height={40}
+          />
           <span className="font-light text-sm">
             <b>Pola Foster</b> and <b>3 other friends</b> have a birthday today.
           </span>
         </div>
-        <Image className="w-full rounded-lg my-7" src="/assets/ad.png" alt="ad" width={500} height={300} />
+        <Image
+          className="w-full rounded-lg my-7"
+          src="/assets/ad.png"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="ad"
+          width={500}
+          height={300}
+        />
         <h4 className="text-lg font-medium mb-5">Online Friends</h4>
         <ul className="p-0 m-0 list-none">
           {UsersData.map((u) => (
@@ -51,6 +65,7 @@ export default function RightBar({ profile }: any) {
                 <Image
                   className="w-24 h-24 object-cover rounded-lg"
                   src={`/assets/person/${index + 1}.jpeg`}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Friend ${index + 1}`}
                   width={100}
                   height={100}
