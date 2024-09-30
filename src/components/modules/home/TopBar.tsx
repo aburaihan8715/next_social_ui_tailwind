@@ -1,0 +1,47 @@
+import Image from "next/image";
+import { MdChat, MdNotifications, MdPerson, MdSearch } from "react-icons/md";
+
+export default function TopBar() {
+  return (
+    <div className="h-12 w-full bg-blue-600 flex items-center sticky top-0 z-50">
+      <div className="flex-1">
+        <span className="text-white text-xl font-bold ml-5 cursor-pointer">Lamasocial</span>
+      </div>
+      <div className="flex-5">
+        <div className="bg-white h-8 rounded-full flex items-center">
+          <MdSearch className="text-gray-500 ml-3" />
+          <input placeholder="Search for friend, post or video" className="bg-transparent border-none focus:outline-none pl-3 w-4/5" />
+        </div>
+      </div>
+      <div className="flex-4 flex items-center justify-around text-white">
+        <div className="space-x-4">
+          <span className="cursor-pointer">Homepage</span>
+          <span className="cursor-pointer">Timeline</span>
+        </div>
+        <div className="flex space-x-6">
+          <div className="relative cursor-pointer">
+            <MdPerson />
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">1</span>
+          </div>
+          <div className="relative cursor-pointer">
+            <MdChat />
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">2</span>
+          </div>
+          <div className="relative cursor-pointer">
+            <MdNotifications />
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">1</span>
+          </div>
+        </div>
+        <div className="relative w-8 h-8 cursor-pointer">
+          <Image
+            src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Profile Picture"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-full"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
